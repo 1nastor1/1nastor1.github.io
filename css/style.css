@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1 {
+    color: blue;
+}
+
+h1:hover {
+    color: bisque;
+    transition: all 3s;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50vh;
+    transform: translate(0, -50%);
+    gap: 50px;
+}
+
+.image {
+    border-radius: 50px;
+}
+
+.image_1,
+.image_2 {
+    transition: all 2s cubic-bezier(.1, 1.02, .89, .25);
+}
+
+.image_1:hover {
+    border-radius: 50%;
+    transform: scale(1.5, 1.5) translate(0%, -25%);
+    /* transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s; */
+    transition: all 2s ease-in-out;
+}
+
+.image_2:hover {
+    border-radius: 50%;
+    transform: scale(1.5, 1.5) translate(0%, 25%);
+    transition: all 2s ease-in-out;
+}
+
+.image_3 {
+    /* animation-play-state: paused; */
+}
+
+.image_3:hover {
+    animation-name: resize;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    /* animation-fill-mode: forwards; */
+}
+
+.image_4:hover {
+    animation-name: resize;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    /* animation-fill-mode: forwards; */
+}
+
+.image_5 {
+    animation-name: border;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.image_5:hover {
+    animation-name: border;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    /* animation-fill-mode: forwards; */
+}
+
+/* @keyframes border {
+    from {
+        border: 1px solid coral;
+    }
+
+    50% {
+        border: 50px solid rgb(234, 255, 96);
+    }
+
+    to {
+        border: 1px solid rgb(115, 173, 253);
+    }
+} */
+
+@keyframes resize {
+    from {
+        transform: scale(0.5, 0.5);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+
+    75% {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+.image_6 {
+    animation-name: move;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    50% {
+        transform: translateX(1400px)
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.image_7 {
+    animation-name: move2;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move2 {
+    50% {
+        transform: translate(1050px, -350px)
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.image_8 {
+    animation-name: move3;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move3 {
+    33% {
+        transform: translateX(700px)
+    }
+    66% {
+        transform: translate(700px, -350px);
+    }
+}
